@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Afficher_jeuController">
+   <children>
+      <Label layoutX="69.0" layoutY="124.0" prefHeight="575.0" prefWidth="1177.0" style="-fx-background-color: white;" />
+      <Label layoutX="9.0" layoutY="15.0" prefHeight="68.0" prefWidth="1262.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="77.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXComboBox focusColor="#842a94" layoutX="1008.0" layoutY="27.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton buttonType="RAISED" layoutX="1153.0" layoutY="25.0" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="335.0" fitWidth="276.0" layoutX="1005.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/class-shape-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="183.0" fitWidth="321.0" layoutX="-7.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/class-shape-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="108.0" fitWidth="102.0" layoutX="870.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/choose-shape-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="577.0" layoutY="714.0" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: EEB84B;" text="show existing games" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteg" buttonType="RAISED" layoutX="121.0" layoutY="455.0" onAction="#DeleteGame" prefHeight="42.0" prefWidth="138.0" style="-fx-background-color: EA512E;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="124.0" fitWidth="114.0" layoutX="22.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/who-we-are-shape.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="87.0" layoutX="1192.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/banner-shape-1.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cjeux" layoutX="112.0" layoutY="394.0" prefHeight="26.0" prefWidth="154.0" />
+      <TableView fx:id="affijeux" layoutX="281.0" layoutY="141.0" prefHeight="488.0" prefWidth="950.0">
+        <columns>
+          <TableColumn fx:id="cidgame" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="ctitlegame" prefWidth="124.00003051757812" text="title" />
+            <TableColumn fx:id="cdescriptiongame" prefWidth="207.99996948242188" text="Description" />
+            <TableColumn fx:id="ctopscoregame" prefWidth="79.199951171875" text="topscore" />
+            <TableColumn fx:id="ccoursegame" prefWidth="171.99993896484375" text="course" />
+            <TableColumn fx:id="cdiffgame" prefWidth="146.40008544921875" text="Difficulty" />
+            <TableColumn fx:id="csourcegame" prefWidth="144.800048828125" text="Source" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

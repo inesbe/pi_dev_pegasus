@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Modifier_jeuController">
+   <children>
+      <Label layoutX="9.0" layoutY="15.0" prefHeight="68.0" prefWidth="1262.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="77.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXComboBox focusColor="#842a94" layoutX="1008.0" layoutY="27.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton buttonType="RAISED" layoutX="1153.0" layoutY="25.0" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="390.0" layoutY="124.0" prefHeight="575.0" prefWidth="534.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="335.0" fitWidth="276.0" layoutX="1005.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/class-shape-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="183.0" fitWidth="321.0" layoutX="-7.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/class-shape-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="454.0" layoutY="192.0" prefHeight="18.0" prefWidth="70.0" text="ID" textFill="#6c757d" />
+      <Label layoutX="451.0" layoutY="275.0" prefHeight="18.0" prefWidth="81.0" text="Title" textFill="#6c757d" />
+      <TextField fx:id="titleg" layoutX="457.0" layoutY="293.0" prefHeight="42.0" prefWidth="414.0" />
+      <Label layoutX="451.0" layoutY="341.0" prefHeight="18.0" prefWidth="82.0" text="Description" textFill="#6c757d" />
+      <Label layoutX="451.0" layoutY="406.0" prefHeight="18.0" prefWidth="82.0" text="ID Course" textFill="#6c757d" />
+      <TextField fx:id="descriptiong" layoutX="457.0" layoutY="359.0" prefHeight="42.0" prefWidth="414.0" />
+      <TextField fx:id="idcourseg" layoutX="456.0" layoutY="422.0" prefHeight="42.0" prefWidth="414.0" />
+      <ImageView fitHeight="108.0" fitWidth="102.0" layoutX="870.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/choose-shape-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="35.0" layoutX="504.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/value-shape-2.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="577.0" layoutY="714.0" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: EEB84B;" text="show existing games" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updateg" buttonType="RAISED" layoutX="456.0" layoutY="638.0" onAction="#UpdateGame" prefHeight="42.0" prefWidth="414.0" style="-fx-background-color: EA512E;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="124.0" fitWidth="114.0" layoutX="22.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/who-we-are-shape.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="87.0" layoutX="1192.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/banner-shape-1.png" />
+         </image>
+      </ImageView>
+      <Text fill="#454749" layoutX="573.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify game">
+         <font>
+            <Font name="Berlin Sans FB" size="36.0" />
+         </font>
+      </Text>
+      <Label layoutX="453.0" layoutY="475.0" prefHeight="18.0" prefWidth="82.0" text="Difficulty" textFill="#6c757d" />
+      <TextField fx:id="diffg" layoutX="458.0" layoutY="491.0" prefHeight="42.0" prefWidth="414.0" />
+      <JFXComboBox fx:id="comboidg" layoutX="456.0" layoutY="219.0" prefHeight="26.0" prefWidth="198.0" />
+      <Label layoutX="454.0" layoutY="546.0" prefHeight="18.0" prefWidth="82.0" text="Source" textFill="#6c757d" />
+      <TextField fx:id="sourceg" layoutX="459.0" layoutY="562.0" prefHeight="42.0" prefWidth="414.0" />
+   </children>
+</AnchorPane>
