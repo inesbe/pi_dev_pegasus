@@ -40,7 +40,7 @@
             <Image url="@../projet/img/class-shape-1.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onAction="#back" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>

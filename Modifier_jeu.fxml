@@ -40,7 +40,7 @@
             <Image url="@../projet/img/class-shape-1.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onAction="#goback" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
@@ -89,8 +89,18 @@
       </Text>
       <Label layoutX="453.0" layoutY="475.0" prefHeight="18.0" prefWidth="82.0" text="Difficulty" textFill="#6c757d" />
       <TextField fx:id="diffg" layoutX="458.0" layoutY="491.0" prefHeight="42.0" prefWidth="414.0" />
-      <JFXComboBox fx:id="comboidg" layoutX="456.0" layoutY="219.0" prefHeight="26.0" prefWidth="198.0" />
-      <Label layoutX="454.0" layoutY="546.0" prefHeight="18.0" prefWidth="82.0" text="Source" textFill="#6c757d" />
-      <TextField fx:id="sourceg" layoutX="459.0" layoutY="562.0" prefHeight="42.0" prefWidth="414.0" />
+      <JFXComboBox fx:id="comboidg" layoutX="456.0" layoutY="219.0" onAction="#fillmodgame" prefHeight="26.0" prefWidth="198.0" />
+      <Label layoutX="462.0" layoutY="538.0" prefHeight="18.0" prefWidth="82.0" text="Source" textFill="#6c757d" />
+      <TextField fx:id="sourceg" layoutX="454.0" layoutY="551.0" prefHeight="42.0" prefWidth="414.0" />
+      <ImageView fx:id="upsource" fitHeight="108.0" fitWidth="55.0" layoutX="880.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/otp_icon_upload.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="upsource1" fitHeight="108.0" fitWidth="55.0" layoutX="880.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/otp_icon_upload.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

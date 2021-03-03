@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.Animation;
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -45,6 +46,8 @@ public class FXMLDocumentController implements Initializable {
     private Label label;
     @FXML
     private JFXButton bupdateg;
+    @FXML
+    private JFXButton pageaffg;
     
      @FXML
     void register(MouseEvent event) throws IOException
@@ -56,7 +59,7 @@ public class FXMLDocumentController implements Initializable {
        Image image = new Image("/projet/img/srcb.gif"); 
             
 root.setCursor(new ImageCursor(image));
-  
+  //***************************
 
       stage.setScene(scene);
       stage.show();
@@ -74,6 +77,12 @@ root.setCursor(new ImageCursor(image));
     {  Stage stage=(Stage)id_signin.getScene().getWindow();
        Parent root=FXMLLoader.load(getClass().getResource("Ajouter_jeu.fxml"));
        Scene scene=new Scene(root);
+          //****************************************************************************   
+       //change cursor
+       Image image = new Image("/projet/img/srcb.gif"); 
+            
+root.setCursor(new ImageCursor(image));
+  //***************************
       stage.setScene(scene);
       stage.show();
      
@@ -120,7 +129,27 @@ root.setCursor(new ImageCursor(image));
           Stage stage=(Stage)id_signin.getScene().getWindow();
        Parent root=FXMLLoader.load(getClass().getResource("Modifier_jeu.fxml"));
        Scene scene=new Scene(root);
- 
+    //****************************************************************************   
+       //change cursor
+       Image image = new Image("/projet/img/srcb.gif"); 
+            
+root.setCursor(new ImageCursor(image));
+  //***************************
+      stage.setScene(scene);
+      stage.show();
+    }
+
+    @FXML
+    private void pagegames(ActionEvent event) throws IOException {
+            Stage stage=(Stage)id_signin.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("menu.fxml"));
+       Scene scene=new Scene(root);
+    //****************************************************************************   
+       //change cursor
+       Image image = new Image("/projet/img/srcb.gif"); 
+            
+root.setCursor(new ImageCursor(image));
+  //***************************
       stage.setScene(scene);
       stage.show();
     }
