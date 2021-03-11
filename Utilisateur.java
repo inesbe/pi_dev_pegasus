@@ -17,10 +17,32 @@ public class Utilisateur {
        private String prénom;
        private int age;
        private String email;
-        private  double moyenne;
-        private double salaire;
+       private int status;
+       private int code;
+
+    public Utilisateur(String email) {
+        this.email = email;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+        
+       
         private int role;
-        private String metier;
+      
 
     public Utilisateur() {
          //To change body of generated methods, choose Tools | Templates.
@@ -54,20 +76,9 @@ public class Utilisateur {
         this.email = email;
     }
 
-    public void setMoyenne(double moyenne) {
-        this.moyenne = moyenne;
-    }
-
-    public void setSalaire(double salaire) {
-        this.salaire = salaire;
-    }
 
     public void setRole(int role) {
         this.role = role;
-    }
-
-    public void setMetier(String metier) {
-        this.metier = metier;
     }
 
     public int getId_utilisateur() {
@@ -98,27 +109,16 @@ public class Utilisateur {
         return email;
     }
 
-    public double getMoyenne() {
-        return moyenne;
-    }
-
-    public double getSalaire() {
-        return salaire;
-    }
 
     public int getRole() {
         return role;
-    }
-
-    public String getMetier() {
-        return metier;
     }
 
     public Utilisateur(int id_utilisateur) {
         this.id_utilisateur = id_utilisateur;
     }
 
-    public Utilisateur(int id_utilisateur, String nom_utilisateur, String mot_de_passe, String nom, String prénom, int age, String email, double moyenne, int role) {
+    public Utilisateur(int id_utilisateur, String nom_utilisateur, String mot_de_passe, String nom, String prénom, int age, String email,int role) {
         this.id_utilisateur = id_utilisateur;
         this.nom_utilisateur = nom_utilisateur;
         this.mot_de_passe = mot_de_passe;
@@ -126,7 +126,7 @@ public class Utilisateur {
         this.prénom = prénom;
         this.age = age;
         this.email = email;
-        this.moyenne = moyenne;
+     
         this.role = role;
     }
 
@@ -139,6 +139,26 @@ public class Utilisateur {
         this.email = email;
     }
 
+    public Utilisateur(int id_utilisateur, String nom_utilisateur, String mot_de_passe, String nom, String prénom, int age, String email) {
+        this.id_utilisateur = id_utilisateur;
+        this.nom_utilisateur = nom_utilisateur;
+        this.mot_de_passe = mot_de_passe;
+        this.nom = nom;
+        this.prénom = prénom;
+        this.age = age;
+        this.email = email;
+    }
+
+    public Utilisateur(String nom_utilisateur, String mot_de_passe, String nom, String prénom, int age, String email, int role) {
+        this.nom_utilisateur = nom_utilisateur;
+        this.mot_de_passe = mot_de_passe;
+        this.nom = nom;
+        this.prénom = prénom;
+        this.age = age;
+        this.email = email;
+        this.role = role;
+    }
+
     public Utilisateur(String nom_utilisateur, String mot_de_passe) {
         this.nom_utilisateur = nom_utilisateur;
         this.mot_de_passe = mot_de_passe;
@@ -146,7 +166,8 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return "Utilisateur{" + "id_utilisateur=" + id_utilisateur + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", nom=" + nom + ", pr\u00e9nom=" + prénom + ", age=" + age + ", email=" + email + ", moyenne=" + moyenne + ", salaire=" + salaire + ", role=" + role + ", metier=" + metier + '}';
+        return "Utilisateur{" + "id_utilisateur=" + id_utilisateur + ", nom_utilisateur=" + nom_utilisateur + ", mot_de_passe=" + mot_de_passe + ", nom=" + nom + ", pr\u00e9nom=" + prénom + ", age=" + age + ", email=" + email + ", role=" + role + '}';
     }
-    
+
+   
 }

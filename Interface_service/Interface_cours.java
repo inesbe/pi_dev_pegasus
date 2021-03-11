@@ -5,24 +5,20 @@
  */
 package projet.Interface_service;
 
+
 import java.sql.SQLException;
 import java.util.List;
 import projet.entity.Cours;
-import projet.entity.Utilisateur;
 
 /**
  *
  * @author shado
  */
-public interface Interface_utilisateur {
- 
-     void add (Utilisateur t) throws SQLException;
+public interface Interface_cours {
+     void add (Cours t) throws SQLException;
     List<Cours> read() throws SQLException;
-    void update(Utilisateur t) throws SQLException;
-    void delete(Utilisateur t) throws SQLException;
+    void update(Cours t) throws SQLException;
+    void delete(Cours t) throws SQLException;
     List<Integer> get_id() throws SQLException;
-    int login(Utilisateur t);
-   public List<Utilisateur> getUtilisateur() throws SQLException;
-
-    
+   public List<Cours> getCours() throws SQLException;
 }

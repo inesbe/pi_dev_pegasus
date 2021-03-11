@@ -66,6 +66,15 @@ public Classe()
         this.id_utilisateur = id_utilisateur;
         this.nom_class = nom_class;
         this.age = age;
+    } 
+
+    public Classe(int id_class) {
+        this.id_class = id_class;
     }
+     public Classe(String nom_class, int age) {
+        this.nom_class = nom_class;
+        this.age = age;
+    }
+    
     
 }

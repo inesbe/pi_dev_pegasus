@@ -6,6 +6,7 @@
 package projet.services;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -63,7 +64,7 @@ public class ServiceClass implements Interface_class{
     public List<Integer> getTeacher() throws SQLException 
     {
          Statement st = cnx.createStatement();
-        String query = "SELECT * FROM  `class` ";
+        String query = "SELECT * FROM  `user` ";
         ResultSet rst = st.executeQuery(query);
         List<Integer> classe = new ArrayList<>();
         while (rst.next()) {
@@ -74,8 +75,53 @@ public class ServiceClass implements Interface_class{
         
         return classe;
         }
+  @Override
+     public List<Integer> getId_Class() throws SQLException 
+    {
+         Statement st = cnx.createStatement();
+        String query = "SELECT * FROM  `class` ";
+        ResultSet rst = st.executeQuery(query);
+        List<Integer> classe = new ArrayList<>();
+        while (rst.next()) {
+            
+         classe.add(rst.getInt("id_class"));
+            
+        }
         
+        return classe;
+        }
+    
+  @Override
+    public void update(Classe t) throws SQLException {
+          PreparedStatement pt = cnx.prepareStatement("update class set nom_class = ? ,  id_utilisateur= ? ,  age = ? where id_class = ? ");
+      pt.setString(1,t.getNom_class());
+      pt.setInt(2,t.getId_utilisateur());
+      pt.setInt(3,t.getAge());
+      pt.setInt(4,t.getId_class());
+         
+        pt.executeUpdate(); 
         
+    }
+
+    @Override
+    public void delete(Classe t) throws SQLException {
+       PreparedStatement pt = cnx.prepareStatement("delete from class where id_class = ?");
+        pt.setInt(1,t.getId_class());
+        pt.executeUpdate(); 
+    }
+
+
+
+
+   
+
+ 
+
+    
+
+
+ 
+
     }
     
     
