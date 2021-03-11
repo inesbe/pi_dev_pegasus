@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Afficher_testController">
+   <children>
+      <Label layoutX="15.0" layoutY="17.0" prefHeight="68.0" prefWidth="1255.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="18.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="99.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXComboBox focusColor="#842a94" layoutX="1017.0" layoutY="30.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton buttonType="RAISED" layoutX="1155.0" layoutY="31.0" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="162.0" fitWidth="257.0" layoutX="-3.0" layoutY="643.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/class-shape-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="303.0" fitWidth="242.0" layoutX="1040.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/class-shape-2.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_baack3" buttonType="RAISED" layoutX="12.0" layoutY="746.0" onAction="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="label" layoutX="256.0" layoutY="131.0" prefHeight="579.0" prefWidth="856.0" style="-fx-background-color: #7cf7b3; -fx-background-radius: 40; -fx-border-color: -fx-background-radius;" />
+      <JFXComboBox fx:id="combo_box" layoutX="73.0" layoutY="413.0" prefHeight="25.0" prefWidth="154.0" unFocusColor="#ea512e" />
+      <ImageView fitHeight="79.0" fitWidth="72.0" layoutX="314.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-2.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tab_test" layoutX="296.0" layoutY="180.0" prefHeight="490.0" prefWidth="768.0" style="-fx-border-color: F9E3B4;">
+         <columns>
+            <TableColumn fx:id="row_id" prefWidth="59.0" style="-fx-background-color: F9E3B4;" text="Id_test" />
+            <TableColumn fx:id="row_q1" prefWidth="91.0" style="-fx-background-color: F9E3B4;" text="Question_1" />
+            <TableColumn fx:id="row_q2" minWidth="0.0" prefWidth="92.0" style="-fx-background-color: F9E3B4;" text="Question2" />
+            <TableColumn fx:id="row_q3" minWidth="5.66668701171875" prefWidth="121.0" style="-fx-background-color: F9E3B4;" text="Question_3" />
+            <TableColumn fx:id="row_q4" prefWidth="168.0" style="-fx-background-color: F9E3B4;" text="Question_4" />
+            <TableColumn fx:id="row_q5" prefWidth="116.0" style="-fx-background-color: F9E3B4;" text="Question_5" />
+            <TableColumn fx:id="row_note" prefWidth="68.0" style="-fx-background-color: F9E3B4;" text="Note" />
+            <TableColumn fx:id="row_time" prefWidth="51.0" style="-fx-background-color: F9E3B4;" text="Durée" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="id_delete" layoutX="67.0" layoutY="454.0" onMouseClicked="#delete" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: #ea512e; -fx-background-radius: 30;" text="Supprimer" textFill="WHITE" />
+      <JFXButton fx:id="id_corrigé" layoutX="158.0" layoutY="454.0" onMouseClicked="#correct" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: #ea512e; -fx-background-radius: 30;" text="Corriger" textFill="WHITE" />
+      <JFXButton fx:id="id_modifi1" layoutX="73.0" layoutY="515.0" onMouseClicked="#modifier" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: #ea512e; -fx-background-radius: 30;" text="Modifier" textFill="WHITE" />
+      <FontAwesomeIconView fx:id="plus" fill="#7cf7b3" glyphName="PLUS" layoutX="1144.0" layoutY="207.0" onMouseClicked="#add" size="80" wrappingWidth="18.761945724487305" />
+      <JFXComboBox fx:id="combo_class" focusColor="#405aa800" layoutX="1214.0" layoutY="161.0" style="-fx-background-color: #7cf7b3;" unFocusColor="#4d4d4d00" />
+   </children>
+</AnchorPane>
