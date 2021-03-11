@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Ajouter_concoursController">
+   <children>
+      <Label layoutX="2.0" layoutY="35.0" prefHeight="63.0" prefWidth="1272.0" style="-fx-background-color: white;" />
+      <JFXButton buttonType="RAISED" layoutX="1170.0" layoutY="43.0" prefHeight="47.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox focusColor="#842a94" layoutX="1018.0" layoutY="37.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="87.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Projet/src/projet/img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="18.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Projet/src/projet/img/magic1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="391.0" layoutY="124.0" prefHeight="536.0" prefWidth="534.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="124.0" fitWidth="114.0" layoutX="32.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Projet/src/projet/img/who-we-are-shape.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnshow" buttonType="RAISED" layoutX="554.0" layoutY="686.0" onMouseClicked="#shoow" prefHeight="42.0" prefWidth="210.0" style="-fx-background-color: EEB84B;" text="show" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="183.0" fitWidth="321.0" layoutX="-10.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Projet/src/projet/img/class-shape-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="55.0" layoutY="704.0" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="335.0" fitWidth="292.0" layoutX="1001.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Projet/src/projet/img/class-shape-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="87.0" layoutX="1202.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Projet/src/projet/img/banner-shape-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnADD" buttonType="RAISED" layoutX="452.0" layoutY="581.0" onMouseClicked="#handleButtonAction" prefHeight="42.0" prefWidth="414.0" style="-fx-background-color: EA512E;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="108.0" fitWidth="102.0" layoutX="880.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Projet/src/projet/img/choose-shape-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="200.0" layoutX="579.0" layoutY="191.0">
+         <image>
+            <Image url="@../img/Capture.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="462.0" layoutY="253.0" prefHeight="18.0" prefWidth="321.0" text="Competition name " textFill="#6c757d" />
+      <TextField fx:id="nom_concour" layoutX="463.0" layoutY="287.0" prefHeight="26.0" prefWidth="171.0" promptText="competition name" />
+      <JFXDatePicker fx:id="Date_debut" defaultColor="#eabb4b" layoutX="465.0" layoutY="331.0" promptText="Start date " />
+      <JFXDatePicker fx:id="Date_fin" defaultColor="#eabb4b" layoutX="464.0" layoutY="388.0" promptText="End date " />
+      <TextField fx:id="Class_id" layoutX="468.0" layoutY="452.0" prefHeight="26.0" prefWidth="114.0" promptText="class id" />
+      <TextField fx:id="Prize_id" layoutX="468.0" layoutY="508.0" prefHeight="26.0" prefWidth="114.0" promptText="Prize" />
+      <ImageView fitHeight="63.0" fitWidth="83.0" layoutX="525.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/value-shape-2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
