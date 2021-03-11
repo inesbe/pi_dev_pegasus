@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Ajout_testController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;">
+         <children>
+            <Label layoutX="9.0" layoutY="15.0" prefHeight="68.0" prefWidth="1262.0" style="-fx-background-color: white;" />
+            <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/magic1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="77.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Capturee.PNG" />
+               </image>
+            </ImageView>
+            <JFXComboBox focusColor="#842a94" layoutX="1008.0" layoutY="27.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+            <JFXButton buttonType="RAISED" layoutX="1153.0" layoutY="25.0" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="390.0" layoutY="124.0" prefHeight="610.0" prefWidth="534.0" style="-fx-background-color: white;" />
+            <ImageView fitHeight="335.0" fitWidth="276.0" layoutX="996.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/class-shape-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="183.0" fitWidth="321.0" layoutX="-7.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/class-shape-1.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="108.0" fitWidth="102.0" layoutX="1053.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/choose-shape-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="35.0" layoutX="412.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/value-shape-2.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="afficher" buttonType="RAISED" layoutX="1000.0" layoutY="393.0" onAction="#show" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: EEB84B;" text="show existing test" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="id_confirm" buttonType="RAISED" layoutX="782.0" layoutY="745.0" onAction="#add" prefHeight="27.0" prefWidth="149.0" style="-fx-background-color: EA512E;" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="124.0" fitWidth="114.0" layoutX="22.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/who-we-are-shape.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="135.0" fitWidth="87.0" layoutX="1192.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/banner-shape-1.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="nom_class" fill="#ea512e" layoutX="483.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class name">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Text>
+            <Text fill="#0e0665" layoutX="752.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Text>
+            <Text fill="#0e0665" layoutX="466.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 1 ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="id_q1" layoutX="460.0" layoutY="302.0" prefHeight="25.0" prefWidth="276.0" />
+            <Text fill="#0e0665" layoutX="466.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 2 ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="id_q2" layoutX="460.0" layoutY="395.0" prefHeight="25.0" prefWidth="276.0" />
+            <Text fill="#0e0665" layoutX="466.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 3 ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="id_q3" layoutX="466.0" layoutY="485.0" prefHeight="25.0" prefWidth="276.0" />
+            <Text fill="#0e0665" layoutX="466.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 4 ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="id_q4" layoutX="460.0" layoutY="580.0" prefHeight="25.0" prefWidth="276.0" />
+            <Text fill="#0e0665" layoutX="466.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question 5 ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="id_q5" layoutX="458.0" layoutY="666.0" prefHeight="25.0" prefWidth="276.0" />
+            <JFXComboBox fx:id="combo_time" layoutX="801.0" layoutY="679.0" prefHeight="25.0" prefWidth="102.0" promptText="Temps" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
