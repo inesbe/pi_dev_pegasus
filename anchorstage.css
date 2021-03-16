@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9 mars 2021, 13:30:27
+    Author     : asus
+*/
+.bw{
+        -fx-background-image:url('file:/C:/Users/asus/Desktop/Projet/src/projet/img/gameover.gif');
+      /* Full height */
+   -fx-height: 100%; 
+
+  /* Center and scale the image nicely */
+   -fx-background-position: center;
+   -fx-background-repeat: no-repeat;
+   -fx-background-size: cover;
+     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.anchor4 {
+    -fx-background-image:url('file:/C:/Users/asus/Desktop/Projet/src/projet/img/gameover.gif');
+      /* Full height */
+   -fx-height: 100%; 
+
+  /* Center and scale the image nicely */
+   -fx-background-position: center;
+   -fx-background-repeat: no-repeat;
+   -fx-background-size: cover;
+
+   
+}
+
+.anchor5 {
+    -fx-background-image:url('file:/C:/Users/asus/Desktop/Projet/src/projet/img/bgs3.png');
+      /* Full height */
+   -fx-height: 100%; 
+
+  /* Center and scale the image nicely */
+   -fx-background-position: center;
+   -fx-background-repeat: no-repeat;
+   -fx-background-size: cover;
+
+   
+}
+
+.anchor {
+    -fx-background-image:url('file:/C:/Users/asus/Desktop/Projet/src/projet/img/bggame.gif');
+      /* Full height */
+   -fx-height: 100%; 
+
+  /* Center and scale the image nicely */
+   -fx-background-position: center;
+   -fx-background-repeat: no-repeat;
+   -fx-background-size: cover;
+
+   
+}
+
+
+.anchor3 {
+    -fx-background-image:url('file:/C:/Users/asus/Desktop/Projet/src/projet/img/bgss.gif');
+      /* Full height */
+ /* -fx-height: 100%; */
+
+  /* Center and scale the image nicely */
+   -fx-background-position: center;
+   -fx-background-repeat: no-repeat;
+   -fx-background-size: cover;
+
+   
+}
+
+
+.image{
+   -fx-display: block;
+  -fx-margin-left: auto;
+  -fx-margin-right: auto;
+  -fx-width: 50%;
+    -fx-height: auto;
+    -fx-max-width: 100%;
+
+}
+
+
+  /*
+.button {
+  -fx-position: relative;
+  -fx-display: inline-block;
+  -fx-cursor: pointer;
+  -fx-outline: none;
+  -fx-border: 0;
+  -fx-vertical-align: middle;
+  -fx-text-decoration: none;
+  -fx-font-size: 1.5rem;
+    -fx-color:rgb(106, 163, 137);
+  -fx-font-weight: 700;
+  -fx-text-transform: uppercase;
+  -fx-font-family: inherit;
+}*/
+
+  .button
+  {
+        -fx-background-color: #4CAF50; /* Green */
+  -fx-border: none;
+   -fx-color: white;
+   -fx-padding: 7.5px 16px;
+   -fx-text-align: center;
+   -fx-text-decoration: none;
+   -fx-display: inline-block;
+   -fx-font-size: 16px;
+  /* -fx-margin: 4px 2px;*/
+   -fx-cursor: pointer;
+  /* -fx-background-color: white;*/ 
+   -fx-color: black; 
+   -fx-border: 2px solid #008CBA;
+   
+
+  }

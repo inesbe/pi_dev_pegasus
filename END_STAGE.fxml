@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1280.0" styleClass="anchor4" stylesheets="@anchorstage.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.END_STAGEController">
+   <children>
+      <Button fx:id="b3" layoutX="329.0" layoutY="653.0" mnemonicParsing="false" onAction="#b3click" prefHeight="78.0" prefWidth="210.0" text="Retry" />
+      <Button fx:id="exit" layoutX="711.0" layoutY="650.0" mnemonicParsing="false" onAction="#b3click" prefHeight="78.0" prefWidth="210.0" text="Exit" />
+   </children>
+</AnchorPane>

@@ -16,6 +16,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,6 +29,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.InputMethodEvent;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import services.ServiceJeu;
@@ -89,6 +91,9 @@ public class Modifier_jeuController implements Initializable {
     @FXML
     private void UpdateGame(ActionEvent event) throws SQLException, IOException {
        
+        
+        
+        
        if(showalert()) 
        { int c=Integer.parseInt(idcourseg.getText());
         Jeu j=new Jeu(comboidg.getValue(),titleg.getText(),descriptiong.getText(),c,diffg.getText(),sourceg.getText());
@@ -156,5 +161,28 @@ public class Modifier_jeuController implements Initializable {
         
         
     }
+           
+           @FXML
+               private void Onlynumbers(KeyEvent event) {
+        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+         String c=event.getCharacter();
+    
+            if(pattern.matcher(c).matches())
+            {
+     
+         System.out.println("Not number");
+
+            }
+            else 
+                 event.consume();
+               
+    
+               
+        
+        
+        
+    }
+           
+           
     
 }

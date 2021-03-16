@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="panel" prefHeight="768.0" prefWidth="1280.0" styleClass="anchor" stylesheets="@anchorstage.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Play_StageController">
+   <children>
+      <ImageView fx:id="whiite" fitHeight="791.0" fitWidth="593.0" layoutX="-3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/whiite.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gameeover" fitHeight="787.0" fitWidth="975.0" layoutX="326.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../projet/img/gameover.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="retry" layoutX="62.0" layoutY="228.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="189.0" text="Retry" />
+      <Button fx:id="exit" layoutX="61.0" layoutY="418.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="189.0" text="Exit" />
+      <GridPane fx:id="timers" layoutX="988.0" layoutY="-2.0" opacity="0.47" prefHeight="66.0" prefWidth="305.0" style="-fx-background-color: violet;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.20001220703125" minWidth="8.799938964843747" prefWidth="83.999951171875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.79998779296875" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.79998779296875" minWidth="10.0" prefWidth="234.39999999999998" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane prefHeight="100.0" prefWidth="205.0" style="-fx-background-color: white;" GridPane.columnIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.00001220703125" minWidth="10.0" prefWidth="92.00001220703125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.99999618530273" minWidth="10.0" prefWidth="75.19998779296874" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints maxHeight="56.799993896484374" minHeight="10.0" prefHeight="19.799998092651364" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="58.4" minHeight="10.0" prefHeight="46.200001907348636" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minutes" textOrigin="CENTER" wrappingWidth="53.897216796875" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Secondes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <AnchorPane prefHeight="29.0" prefWidth="62.0" style="-fx-background-color: grey;" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Text fx:id="mins" layoutX="16.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: grey;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Text fx:id="secs" layoutX="13.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <ImageView fx:id="pauseb" fitHeight="74.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../projet/img/pausee.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </GridPane>
+      <TextField fx:id="reponses" layoutX="509.0" layoutY="710.0" prefHeight="42.0" prefWidth="248.0" />
+      <Button fx:id="validers" layoutX="756.0" layoutY="710.0" mnemonicParsing="false" onAction="#validation" text="valider" />
+      <ImageView fx:id="sources" fitHeight="514.0" fitWidth="874.0" layoutX="252.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+         <image>
+            <Image url="@../projet/img/Cartoon-farm-landscape-background-Vector-Free-Download.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="questions" layoutX="432.0" layoutY="54.0" text="Label" textFill="#ed22d2">
+         <font>
+            <Font name="Forte" size="41.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <HBox fx:id="lane1" layoutX="58.0" layoutY="62.0" prefHeight="56.0" prefWidth="183.0" />
+      <Label fx:id="getid" layoutX="37.0" layoutY="19.0" text="Label">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

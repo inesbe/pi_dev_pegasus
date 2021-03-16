@@ -85,6 +85,6 @@
             <Image url="@img/banner-shape-4.png" />
          </image>
       </ImageView>
-      <TilePane fx:id="gamestale" layoutX="12.0" layoutY="155.0" prefHeight="548.0" prefWidth="1243.0" />
+      <TilePane fx:id="gamestale" layoutX="12.0" layoutY="155.0" onMouseClicked="#infogame" prefHeight="548.0" prefWidth="1243.0" />
    </children>
 </AnchorPane>

@@ -51,7 +51,7 @@
       <Label layoutX="451.0" layoutY="341.0" prefHeight="18.0" prefWidth="82.0" text="Description" textFill="#6c757d" />
       <Label layoutX="451.0" layoutY="406.0" prefHeight="18.0" prefWidth="82.0" text="ID Course" textFill="#6c757d" />
       <TextField fx:id="descriptiong" layoutX="457.0" layoutY="359.0" prefHeight="42.0" prefWidth="414.0" />
-      <TextField fx:id="idcourseg" layoutX="456.0" layoutY="422.0" prefHeight="42.0" prefWidth="414.0" />
+      <TextField fx:id="idcourseg" layoutX="456.0" layoutY="422.0" onKeyTyped="#Onlynumbers" prefHeight="42.0" prefWidth="414.0" />
       <ImageView fitHeight="108.0" fitWidth="102.0" layoutX="870.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../projet/img/choose-shape-1.png" />
@@ -91,13 +91,8 @@
       <TextField fx:id="diffg" layoutX="458.0" layoutY="491.0" prefHeight="42.0" prefWidth="414.0" />
       <JFXComboBox fx:id="comboidg" layoutX="456.0" layoutY="219.0" onAction="#fillmodgame" prefHeight="26.0" prefWidth="198.0" />
       <Label layoutX="462.0" layoutY="538.0" prefHeight="18.0" prefWidth="82.0" text="Source" textFill="#6c757d" />
-      <TextField fx:id="sourceg" layoutX="454.0" layoutY="551.0" prefHeight="42.0" prefWidth="414.0" />
-      <ImageView fx:id="upsource" fitHeight="108.0" fitWidth="55.0" layoutX="880.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../projet/img/otp_icon_upload.gif" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="upsource1" fitHeight="108.0" fitWidth="55.0" layoutX="880.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="sourceg" layoutX="454.0" layoutY="565.0" prefHeight="42.0" prefWidth="414.0" />
+      <ImageView fx:id="upsource" fitHeight="108.0" fitWidth="55.0" layoutX="869.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../projet/img/otp_icon_upload.gif" />
          </image>

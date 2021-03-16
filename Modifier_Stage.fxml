@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Ajouter_jeuController">
+<AnchorPane id="AnchorPane" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Modifier_StageController">
    <children>
       <Label layoutX="9.0" layoutY="15.0" prefHeight="68.0" prefWidth="1262.0" style="-fx-background-color: white;" />
       <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
@@ -29,7 +29,7 @@
             <Font name="Arial" size="15.0" />
          </font>
       </JFXButton>
-      <Label layoutX="390.0" layoutY="124.0" prefHeight="575.0" prefWidth="534.0" style="-fx-background-color: white;" />
+      <Label layoutX="390.0" layoutY="124.0" prefHeight="651.0" prefWidth="534.0" style="-fx-background-color: white;" />
       <ImageView fitHeight="335.0" fitWidth="276.0" layoutX="1005.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../projet/img/class-shape-2.png" />
@@ -46,12 +46,12 @@
          </font>
       </JFXButton>
       <Label layoutX="454.0" layoutY="178.0" prefHeight="18.0" prefWidth="70.0" text="ID" textFill="#6c757d" />
-      <Label layoutX="451.0" layoutY="261.0" prefHeight="18.0" prefWidth="81.0" text="Title" textFill="#6c757d" />
-      <TextField fx:id="titleg" layoutX="457.0" layoutY="279.0" prefHeight="42.0" prefWidth="414.0" />
-      <Label layoutX="451.0" layoutY="327.0" prefHeight="18.0" prefWidth="82.0" text="Description" textFill="#6c757d" />
-      <Label layoutX="451.0" layoutY="392.0" prefHeight="18.0" prefWidth="82.0" text="ID Course" textFill="#6c757d" />
-      <TextField fx:id="descriptiong" layoutX="457.0" layoutY="345.0" prefHeight="42.0" prefWidth="414.0" />
-      <TextField fx:id="idcourseg" layoutX="456.0" layoutY="408.0" onKeyTyped="#Onlynumbers" prefHeight="42.0" prefWidth="414.0" />
+      <Label layoutX="451.0" layoutY="261.0" prefHeight="18.0" prefWidth="81.0" text="Number" textFill="#6c757d" />
+      <TextField fx:id="numbers" layoutX="457.0" layoutY="279.0" onKeyTyped="#Onlynumbers" prefHeight="42.0" prefWidth="414.0" />
+      <Label layoutX="451.0" layoutY="327.0" prefHeight="18.0" prefWidth="82.0" text="Text" textFill="#6c757d" />
+      <Label layoutX="451.0" layoutY="392.0" prefHeight="18.0" prefWidth="82.0" text="Try" textFill="#6c757d" />
+      <TextField fx:id="texts" layoutX="457.0" layoutY="345.0" prefHeight="42.0" prefWidth="414.0" />
+      <TextField fx:id="trys" layoutX="456.0" layoutY="408.0" prefHeight="42.0" prefWidth="414.0" />
       <ImageView fitHeight="108.0" fitWidth="102.0" layoutX="870.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../projet/img/choose-shape-1.png" />
@@ -62,12 +62,7 @@
             <Image url="@../projet/img/value-shape-2.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="577.0" layoutY="714.0" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: EEB84B;" text="show existing games" textFill="WHITE">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="addg" buttonType="RAISED" layoutX="456.0" layoutY="616.0" onAction="#AddGame" prefHeight="42.0" prefWidth="414.0" style="-fx-background-color: EA512E;" text="ADD" textFill="WHITE">
+      <JFXButton fx:id="updates" buttonType="RAISED" layoutX="455.0" layoutY="723.0" onAction="#UpdateStage" prefHeight="42.0" prefWidth="414.0" style="-fx-background-color: EA512E;" text="UPDATE" textFill="WHITE">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
@@ -82,20 +77,24 @@
             <Image url="@../projet/img/banner-shape-1.png" />
          </image>
       </ImageView>
-      <Text fill="#454749" layoutX="573.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add game">
+      <Text fill="#454749" layoutX="573.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Stage">
          <font>
             <Font name="Berlin Sans FB" size="36.0" />
          </font>
       </Text>
-      <Label layoutX="453.0" layoutY="461.0" prefHeight="18.0" prefWidth="82.0" text="Difficulty" textFill="#6c757d" />
-      <TextField fx:id="diffg" layoutX="458.0" layoutY="477.0" prefHeight="42.0" prefWidth="414.0" />
+      <Label layoutX="453.0" layoutY="461.0" prefHeight="18.0" prefWidth="82.0" text="Correction" textFill="#6c757d" />
+      <TextField fx:id="corrections" layoutX="458.0" layoutY="477.0" prefHeight="42.0" prefWidth="414.0" />
       <Label layoutX="452.0" layoutY="528.0" prefHeight="18.0" prefWidth="82.0" text="Source" textFill="#6c757d" />
-      <TextField fx:id="sourceg" layoutX="457.0" layoutY="544.0" prefHeight="42.0" prefWidth="414.0" />
+      <TextField fx:id="sources" layoutX="457.0" layoutY="544.0" prefHeight="42.0" prefWidth="414.0" />
       <ImageView fx:id="upsource" fitHeight="108.0" fitWidth="55.0" layoutX="870.0" layoutY="542.0" onMouseClicked="#Loadimg" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../projet/img/otp_icon_upload.gif" />
          </image>
       </ImageView>
-      <TextField fx:id="idg" layoutX="453.0" layoutY="207.0" onKeyTyped="#Onlynumbers" prefHeight="40.0" prefWidth="421.0" />
+      <Label layoutX="452.0" layoutY="591.0" prefHeight="18.0" prefWidth="82.0" text="Time" textFill="#6c757d" />
+      <TextField fx:id="times" layoutX="457.0" layoutY="607.0" prefHeight="42.0" prefWidth="414.0" />
+      <Label layoutX="452.0" layoutY="650.0" prefHeight="18.0" prefWidth="82.0" text="Game" textFill="#6c757d" />
+      <JFXComboBox fx:id="games" layoutX="457.0" layoutY="671.0" prefHeight="31.0" prefWidth="414.0" />
+      <JFXComboBox fx:id="cids" layoutX="455.0" layoutY="214.0" onAction="#fillmodstage" prefHeight="26.0" prefWidth="414.0" />
    </children>
 </AnchorPane>

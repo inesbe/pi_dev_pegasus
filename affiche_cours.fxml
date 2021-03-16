@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Ajout_coursController">
+   <children>
+      <Label layoutX="15.0" layoutY="17.0" prefHeight="68.0" prefWidth="1255.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="18.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="99.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXComboBox focusColor="#842a94" layoutX="1017.0" layoutY="30.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton buttonType="RAISED" layoutX="1155.0" layoutY="31.0" prefHeight="42.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="162.0" fitWidth="257.0" layoutX="-3.0" layoutY="643.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/class-shape-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="303.0" fitWidth="242.0" layoutX="1040.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/class-shape-2.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="12.0" layoutY="746.0" onMouseClicked="#back" prefHeight="20.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="90.0" layoutY="115.0" prefHeight="312.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: -fx-background-radius;" />
+      <Line endX="100.0" layoutX="228.0" layoutY="328.0" startX="-100.0" stroke="#ea512e" />
+      <Button layoutX="105.0" layoutY="380.0" mnemonicParsing="false" style="-fx-background-color: #ea512e; -fx-background-radius: 30;" text="Join class" textFill="WHITE" />
+      <Label layoutX="117.0" layoutY="262.0" prefHeight="26.0" prefWidth="158.0" text="Color Matching" />
+      <Label layoutX="105.0" layoutY="336.0" prefHeight="26.0" prefWidth="283.0" text="Age: 3-5 Year    Time: 8-10 AM         Seat: 25" />
+      <Label layoutX="514.0" layoutY="106.0" prefHeight="312.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: -fx-background-radius;" />
+      <Label layoutX="933.0" layoutY="106.0" prefHeight="312.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: -fx-background-radius;" />
+      <Label layoutX="318.0" layoutY="442.0" prefHeight="312.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: -fx-background-radius;" />
+      <Label layoutX="724.0" layoutY="442.0" prefHeight="312.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-border-color: -fx-background-radius;" />
+   </children>
+</AnchorPane>

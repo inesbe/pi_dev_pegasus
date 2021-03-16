@@ -48,6 +48,14 @@ public class FXMLDocumentController implements Initializable {
     private JFXButton bupdateg;
     @FXML
     private JFXButton pageaffg;
+    @FXML
+    private JFXButton ADDSTAGE;
+    @FXML
+    private JFXButton SHOWSTAGE;
+    @FXML
+    private JFXButton UPDATESTAGE;
+    @FXML
+    private JFXButton STAGESFRONT;
     
      @FXML
     void register(MouseEvent event) throws IOException
@@ -152,6 +160,73 @@ root.setCursor(new ImageCursor(image));
   //***************************
       stage.setScene(scene);
       stage.show();
+    }
+
+    @FXML
+    private void GOADDSTAGE(MouseEvent event) throws IOException {
+                Stage stage=(Stage)ADDSTAGE.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("Ajouter_Stage.fxml"));
+       Scene scene=new Scene(root);
+    //****************************************************************************   
+       //change cursor
+       Image image = new Image("/projet/img/srcb.gif"); 
+            
+root.setCursor(new ImageCursor(image));
+  //***************************
+      stage.setScene(scene);
+      stage.show();
+    }
+
+    @FXML
+    private void GOSHOWSTAGE(MouseEvent event) throws IOException {
+                    Stage stage=(Stage)ADDSTAGE.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("Afficher_Stage.fxml"));
+       Scene scene=new Scene(root);
+    //****************************************************************************   
+       //change cursor
+       Image image = new Image("/projet/img/srcb.gif"); 
+            
+root.setCursor(new ImageCursor(image));
+  //***************************
+      stage.setScene(scene);
+      stage.show();
+    }
+
+    @FXML
+    private void GOUPDATESTAGE(MouseEvent event) throws IOException {
+                            Stage stage=(Stage)ADDSTAGE.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("Modifier_Stage.fxml"));
+       Scene scene=new Scene(root);
+    //****************************************************************************   
+       //change cursor
+       Image image = new Image("/projet/img/srcb.gif"); 
+            
+root.setCursor(new ImageCursor(image));
+  //***************************
+      stage.setScene(scene);
+      stage.show();
+        
+        
+    }
+
+    @FXML
+    private void GOSTAGES(MouseEvent event) {
+    }
+
+    @FXML
+    private void GOSTARTSTAGE(ActionEvent event) throws IOException {
+                              Stage stage=(Stage)ADDSTAGE.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("Play_Stage.fxml"));
+       Scene scene=new Scene(root);
+    //****************************************************************************   
+       //change cursor
+       Image image = new Image("/projet/img/srcb.gif"); 
+            
+root.setCursor(new ImageCursor(image));
+  //***************************
+      stage.setScene(scene);
+      stage.show();
+          
     }
     
 }
