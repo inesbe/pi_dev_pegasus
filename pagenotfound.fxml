@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.PagenotfoundController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" minHeight="786.0" minWidth="1280.0" prefHeight="786.0" prefWidth="1280.0" style="-fx-background-color: whitE;">
+         <children>
+            <Label layoutX="17.0" layoutY="12.0" prefHeight="66.0" prefWidth="1254.0" style="-fx-background-color: F5EDEC;" />
+            <ImageView fitHeight="66.0" fitWidth="86.0" layoutX="17.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/magic1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="54.0" fitWidth="198.0" layoutX="103.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Capturee.PNG" />
+               </image>
+            </ImageView>
+            <JFXComboBox layoutX="973.0" layoutY="21.0" prefHeight="46.0" prefWidth="127.0" promptText="Language" />
+            <JFXButton fx:id="back_id" layoutX="24.0" layoutY="729.0" onMouseClicked="#back" prefHeight="42.0" prefWidth="113.0" style="-fx-background-color: EA512E;" text="back" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+            <JFXButton layoutX="1129.0" layoutY="25.0" prefHeight="46.0" prefWidth="127.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="116.0" fitWidth="101.0" layoutX="27.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/value-shape-1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="532.0" fitWidth="952.0" layoutX="190.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+           
+                 <image>
+                  <Image url="@img/dribbble_1.gif" />
+               </image>
+            </ImageView>
+            <Label layoutX="512.0" layoutY="149.0" text="No Test found" textFill="#ea512e">
+               <font>
+                  <Font size="53.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

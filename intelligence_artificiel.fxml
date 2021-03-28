@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #080614;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Intelligence_artificielController">
+   <children>
+      <ImageView fx:id="ia_id" fitHeight="531.0" fitWidth="722.0" layoutX="257.0" layoutY="68.0" onMouseClicked="#add_command">
+         <image>
+            <Image url="@img/2df17a939ee60ffffee0cd473b3a1fab.gif" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_txt" alignment="CENTER" layoutX="460.0" layoutY="651.0" onKeyPressed="#text_comand" prefHeight="42.0" prefWidth="292.0" promptText="Ask something ..." style="-fx-background-radius: 100;">
+         <font>
+            <Font name="Bodoni MT" size="19.0" />
+         </font></TextField>
+   </children>
+</AnchorPane>
