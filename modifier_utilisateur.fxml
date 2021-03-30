@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Modifier_utilisateurController">
+   <children>
+      <Label layoutX="7.0" layoutY="6.0" prefHeight="68.0" prefWidth="1266.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="9.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="78.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXComboBox focusColor="#842a94" layoutX="1050.0" layoutY="25.0" prefHeight="31.0" prefWidth="102.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton layoutX="1174.0" layoutY="26.0" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: EA512E;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="383.0" layoutY="92.0" prefHeight="606.0" prefWidth="566.0" style="-fx-background-color: white;" />
+      <ImageView fx:id="pen" fitHeight="53.0" fitWidth="35.0" layoutX="414.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="460.0" layoutY="176.0" prefHeight="18.0" prefWidth="210.0" text="New username" textFill="#6c757d" />
+      <TextField fx:id="id_username" layoutX="461.0" layoutY="213.0" prefHeight="34.0" prefWidth="399.0" promptText="username" />
+      <Label layoutX="460.0" layoutY="260.0" prefHeight="18.0" prefWidth="236.0" text="New name" textFill="#6c757d" />
+      <TextField fx:id="id_name" layoutX="460.0" layoutY="289.0" prefHeight="34.0" prefWidth="399.0" promptText="name" />
+      <Label layoutX="460.0" layoutY="335.0" prefHeight="18.0" prefWidth="246.0" text="New surname" textFill="#6c757d" />
+      <TextField fx:id="id_surname" layoutX="460.0" layoutY="368.0" prefHeight="34.0" prefWidth="399.0" promptText="surname" />
+      <Label layoutX="460.0" layoutY="410.0" prefHeight="18.0" prefWidth="200.0" text="New age" textFill="#6c757d" />
+      <TextField fx:id="id_age" layoutX="462.0" layoutY="441.0" prefHeight="34.0" prefWidth="399.0" promptText="age" />
+      <Label layoutX="456.0" layoutY="484.0" prefHeight="18.0" prefWidth="222.0" text="New email" textFill="#6c757d" />
+      <TextField fx:id="id_email" layoutX="460.0" layoutY="515.0" prefHeight="34.0" prefWidth="399.0" promptText="email" />
+      <JFXButton fx:id="modif_id" buttonType="RAISED" layoutX="458.0" layoutY="651.0" onMouseClicked="#modify" prefHeight="34.0" prefWidth="399.0" style="-fx-background-color: EA512E;" text="MODIFY" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="id_affich" buttonType="RAISED" layoutX="571.0" layoutY="712.0" onMouseClicked="#affich" prefHeight="42.0" prefWidth="174.0" style="-fx-background-color: EEB84B;" text="show existing users" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="bird2" fitHeight="61.0" fitWidth="200.0" layoutX="982.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/testimonials-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="117.0" fitWidth="94.0" layoutX="873.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/choose-shape-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="172.0" fitWidth="82.0" layoutX="1198.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bird1" fitHeight="89.0" fitWidth="233.0" layoutX="11.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/testimonials-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="28.0" layoutY="723.0" onMouseClicked="#back" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="583.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/modifier.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="455.0" layoutY="560.0" prefHeight="18.0" prefWidth="210.0" text="Password" textFill="#6c757d" />
+      <PasswordField fx:id="id_password" layoutX="461.0" layoutY="592.0" prefHeight="34.0" prefWidth="399.0" promptText="password" />
+   </children>
+</AnchorPane>
