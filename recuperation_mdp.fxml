@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Recuperation_mdpController">
+   <children>
+      <Label layoutX="6.0" layoutY="8.0" prefHeight="68.0" prefWidth="1266.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="9.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="88.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="id_sun" fitHeight="135.0" fitWidth="129.0" layoutX="28.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="83.0" layoutX="50.0" layoutY="584.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-2.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_back2" buttonType="RAISED" layoutX="17.0" layoutY="720.0" onAction="#back" onMouseClicked="#back2" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="combo_lang" focusColor="#842a94" layoutX="1018.0" layoutY="19.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton fx:id="id_set" buttonType="RAISED" layoutX="1159.0" layoutY="18.0" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="272.0" fitWidth="130.0" layoutX="1150.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-3.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="389.0" layoutY="166.0" prefHeight="518.0" prefWidth="535.0" style="-fx-background-color: white;" />
+      <Text fx:id="forgot_txt" fill="#1b0238" layoutX="465.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot you password ! " wrappingWidth="424.13671875">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="53.0" fitWidth="35.0" layoutX="423.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="108.0" fitWidth="102.0" layoutX="857.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/choose-shape-1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="email_txt" layoutX="449.0" layoutY="292.0" prefHeight="18.0" prefWidth="208.0" text="Please enter your email" textFill="#6c757d">
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <TextField fx:id="code_id" layoutX="450.0" layoutY="514.0" opacity="0.0" prefHeight="50.0" prefWidth="414.0" promptText="Code" style="-fx-background-color: 0366F3;" />
+      <JFXButton fx:id="confirm_id" buttonType="RAISED" layoutX="580.0" layoutY="595.0" onMouseClicked="#confirm_cod" opacity="0.0" prefHeight="29.0" prefWidth="146.0" style="-fx-background-color: #3498DB;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="id_send" fitHeight="154.0" fitWidth="175.0" layoutX="566.0" layoutY="358.0" onMouseClicked="#send_mail" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/4039dbf0e5561de5f05c8c3f546a8744.gif" />
+         </image>
+      </ImageView>
+      <TextField fx:id="mail" layoutX="449.0" layoutY="333.0" prefHeight="50.0" prefWidth="414.0" promptText="Email" />
+      <Label fx:id="id_lab" layoutX="445.0" layoutY="466.0" opacity="0.0" prefHeight="18.0" prefWidth="208.0" text="Please enter the security code" textFill="#6c757d">
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

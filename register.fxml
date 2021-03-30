@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.RegisterController">
+   <children>
+      <Label layoutX="382.0" layoutY="98.0" prefHeight="627.0" prefWidth="512.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="50.0" fitWidth="168.0" layoutX="576.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/register.PNG" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_user" layoutX="439.0" layoutY="194.0" prefHeight="31.0" prefWidth="398.0" promptText="Username" />
+      <TextField fx:id="id_name" layoutX="439.0" layoutY="269.0" prefHeight="31.0" prefWidth="398.0" promptText="Name" />
+      <TextField fx:id="id_age" layoutX="441.0" layoutY="419.0" prefHeight="31.0" prefWidth="398.0" promptText="age" />
+      <TextField fx:id="id_email" layoutX="441.0" layoutY="487.0" prefHeight="31.0" prefWidth="398.0" promptText="email" />
+      <Label fx:id="email_txt" layoutX="444.0" layoutY="458.0" prefHeight="18.0" prefWidth="174.0" text="Email" textFill="#6c757d" />
+      <Label layoutX="283.0" layoutY="243.0" />
+      <Label fx:id="surname_txt" layoutX="440.0" layoutY="316.0" prefHeight="18.0" prefWidth="150.0" text="surname" textFill="#6c757d" />
+      <Label fx:id="age_txt" layoutX="444.0" layoutY="388.0" prefHeight="18.0" prefWidth="158.0" text="age" textFill="#6c757d" />
+      <Label fx:id="user_txt" layoutX="440.0" layoutY="157.0" prefHeight="18.0" prefWidth="110.0" text="User name" textFill="#6c757d" />
+      <Label fx:id="name_txt" layoutX="438.0" layoutY="238.0" prefHeight="18.0" prefWidth="126.0" text="name" textFill="#6c757d" />
+      <ImageView fx:id="sun2" fitHeight="175.0" fitWidth="110.0" layoutX="32.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="117.0" fitWidth="83.0" layoutX="32.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="211.0" fitWidth="136.0" layoutX="1175.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-3.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="id_role" layoutX="425.0" layoutY="653.0" onHiding="#combo4" onMouseClicked="#combo" onShowing="#combo3" onShown="#combo2" prefHeight="20.0" prefWidth="150.0" promptText="you are " />
+      <JFXButton fx:id="id_add" buttonType="RAISED" layoutX="576.0" layoutY="689.0" onAction="#add" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: EA512E;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="23.0" layoutY="711.0" onMouseClicked="#back" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="account_txt" layoutX="517.0" layoutY="729.0" prefHeight="31.0" prefWidth="164.0" text="Already have an account?" textFill="#6c757d">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="log_id" layoutX="678.0" layoutY="733.0" onMouseClicked="#log" prefHeight="18.0" prefWidth="164.0" text="Login now!" underline="true">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="11.0" prefHeight="68.0" prefWidth="1250.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="21.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="98.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_set" buttonType="RAISED" layoutX="1149.0" layoutY="22.0" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="id_surname" layoutX="440.0" layoutY="344.0" prefHeight="31.0" prefWidth="398.0" promptText="Surename" />
+      <PasswordField fx:id="id_pass" layoutX="443.0" layoutY="565.0" onKeyPressed="#prog" onKeyReleased="#prog3" onKeyTyped="#prog2" prefHeight="31.0" prefWidth="398.0" promptText="Password" />
+      <Label fx:id="password_txt" layoutX="444.0" layoutY="531.0" prefHeight="18.0" prefWidth="131.0" text="Password" textFill="#6c757d" />
+      <TextField fx:id="id_user1" layoutX="595.0" layoutY="653.0" opacity="0.0" prefHeight="31.0" prefWidth="110.0" promptText="Metier" />
+      <ProgressBar fx:id="progBar" layoutX="532.0" layoutY="616.0" prefWidth="200.0" progress="0.0" />
+      <JFXComboBox fx:id="combo_langue" layoutX="1013.0" layoutY="30.0" onHiding="#lang" prefHeight="31.0" prefWidth="110.0" promptText="Language" />
+      <JFXTextField fx:id="photo_id" layoutX="732.0" layoutY="652.0" onMouseClicked="#photo" promptText="ADD Photo" />
+   </children>
+</AnchorPane>

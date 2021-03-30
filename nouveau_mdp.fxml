@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: F5EDEC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Nouveau_mdpController">
+   <children>
+      <TextField fx:id="pass_text" layoutX="442.0" layoutY="387.0" prefHeight="54.0" prefWidth="418.0" promptText="Confirm New Password" />
+      <Label layoutX="8.0" layoutY="8.0" prefHeight="68.0" prefWidth="1266.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="88.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="id_back" buttonType="RAISED" layoutX="16.0" layoutY="720.0" onAction="#back" onMouseClicked="#go_login" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox focusColor="#842a94" layoutX="998.0" layoutY="25.0" prefHeight="35.0" prefWidth="122.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton buttonType="RAISED" layoutX="1160.0" layoutY="26.0" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="382.0" layoutY="116.0" prefHeight="518.0" prefWidth="535.0" style="-fx-background-color: white;" />
+      <JFXButton fx:id="id_ok" buttonType="RAISED" layoutX="441.0" layoutY="530.0" onAction="#login" onMouseClicked="#nouveau_mdp" prefHeight="47.0" prefWidth="418.0" style="-fx-background-color: EA512E;" text="OK" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="441.0" layoutY="223.0" prefHeight="35.0" prefWidth="248.0" text="Please enter your new password" textFill="#6c757d">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="363.0" prefHeight="18.0" prefWidth="83.0" text="Confirm" textFill="#6c757d">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Text fx:id="new_pass_titre" fill="#1b0238" layoutX="531.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password" wrappingWidth="424.13671875">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="pen" fitHeight="55.0" fitWidth="57.0" layoutX="397.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-2.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="show_id" layoutX="441.0" layoutY="477.0" mnemonicParsing="false" onMouseClicked="#show_passw" prefHeight="18.0" prefWidth="156.0" text="Show Password" />
+      <TextField fx:id="pass_text" layoutX="445.0" layoutY="400.0" prefHeight="55.0" prefWidth="418.0" visible="false" />
+      <PasswordField fx:id="pass_hidden" layoutX="445.0" layoutY="400.0" prefHeight="54.0" prefWidth="418.0" promptText="Confirm New Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="new_txt" layoutX="442.0" layoutY="281.0" prefHeight="55.0" prefWidth="418.0" />
+      <PasswordField fx:id="id_new" layoutX="442.0" layoutY="281.0" prefHeight="55.0" prefWidth="418.0" promptText="New Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
