@@ -13,18 +13,17 @@ import java.util.Date;
  * 
  */
 public class Concours {
-    
-    private int id_concours;
-    private String nom_concours;
-    private  int id_class;
 
-    public Concours(int id_concours, String nom_concours, LocalDate date_debut, LocalDate date_fin, int prix) {
-        this.id_concours = id_concours;
+    public Concours(String nom_concours, LocalDate date_debut, LocalDate date_fin, int prix) {
         this.nom_concours = nom_concours;
         this.date_debut = date_debut;
         this.date_fin = date_fin;
         this.prix = prix;
     }
+    
+    private int id_concours;
+    private String nom_concours;
+    private  int id_class;
      private LocalDate date_debut;
     private LocalDate date_fin;
 

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.Winner_concoursController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane id="AnchorPane" layoutX="-14.0" layoutY="2.0" minHeight="786.0" minWidth="1280.0" prefHeight="798.0" prefWidth="1304.0" style="-fx-background-color: F5EDEC;">
+                     <children>
+                        <Label layoutX="9.0" layoutY="15.0" prefHeight="68.0" prefWidth="1262.0" style="-fx-background-color: white;" />
+                        <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="8.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/magic1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="77.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Capturee.PNG" />
+                           </image>
+                        </ImageView>
+                        <JFXComboBox focusColor="#842a94" layoutX="1008.0" layoutY="27.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+                        <JFXButton buttonType="RAISED" layoutX="1153.0" layoutY="25.0" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="335.0" fitWidth="276.0" layoutX="1030.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/class-shape-2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="183.0" fitWidth="321.0" layoutX="-7.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/class-shape-1.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="id_back1" buttonType="RAISED" layoutX="22.0" layoutY="735.0" onMouseClicked="#back" prefHeight="34.0" prefWidth="96.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="135.0" fitWidth="87.0" layoutX="1192.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/banner-shape-1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="660.0" fitWidth="780.0" layoutX="243.0" layoutY="66.0">
+                           <image>
+                              <Image url="@img/oie_transparent%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="id_nom" layoutX="501.0" layoutY="628.0" prefHeight="55.0" prefWidth="276.0" text="labl" textFill="#fcf53e">
+                           <font>
+                              <Font name="Cooper Black" size="47.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="330.0" fitWidth="326.0" layoutX="27.0" layoutY="23.0">
+                           <image>
+                              <Image url="@img/giphy%20(4).gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="539.0" layoutY="635.0">
+                           <image>
+                              <Image url="@img/source%20(1).gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

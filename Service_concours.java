@@ -31,8 +31,8 @@ public class Service_concours implements Interface_concours{
     @Override
     public void add(Concours t) throws SQLException {
           Statement st = cnx.createStatement();
-    //    String req = "insert into personne values ("+p.getId()+" , " +p.getNom()+ ", " +p.getPrenom() +")";
-          String req =" insert into concours ( nom_concours,id_class,prix,date_debut,date_fin ) values ( '"+t.getNom_concours()+"','"+t.getId_class()+"','"+t.getPrix()+"','"+t.getDate_debut()+"','"+t.getDate_fin()+"' )"; 
+    
+          String req =" insert into concours ( nom_concours,prix,date_debut,date_fin ) values ( '"+t.getNom_concours()+"','"+t.getPrix()+"','"+t.getDate_debut()+"','"+t.getDate_fin()+"' )"; 
     st.executeUpdate(req);       
     }
     @Override
@@ -41,15 +41,17 @@ public class Service_concours implements Interface_concours{
     }
 
     @Override
-    public void update(Concours t) throws SQLException {
-         PreparedStatement st = cnx.prepareStatement("update concours set nom_concours = ? , prix = ? , date_debut = ? , date_fin = ?  where id_concours = ? ");
-      st.setString(1,t.getNom_concours());
-      st.setInt(2,t.getPrix());
-      st.setString(3,String.valueOf(t.getDate_debut()));
-      st.setString(4,String.valueOf(t.getDate_fin()));
-      st.setInt(5,t.getId_concours());
-   
-        st.executeUpdate();
+    public void update() throws SQLException {
+       PreparedStatement pt = cnx.prepareStatement("update concours set is_done=1 where is_done=0");
+  
+        pt.executeUpdate(); 
+    }
+
+    
+        public void update2() throws SQLException {
+       PreparedStatement pt = cnx.prepareStatement("update concours set is_done=2 where is_done=1");
+  
+        pt.executeUpdate(); 
     }
 
     @Override
@@ -88,7 +90,7 @@ public class Service_concours implements Interface_concours{
              Concours c = new Concours();
              c.setId_concours(rst.getInt("id_concours"));
              c.setNom_concours(rst.getString("nom_concours"));
-             c.setId_class(rst.getInt("id_class"));
+     c.setPrix(rst.getInt("prix"));
              c.setDate_debut(LocalDate.parse(rst.getString("date_debut")));
            c.setDate_fin(LocalDate.parse(rst.getString("date_fin")));
            System.out.println(c);
@@ -119,9 +121,54 @@ public class Service_concours implements Interface_concours{
         return co;
     }
     
-    
-    
-    
+   public int get_concours() throws SQLException
+            
+    {  
+        int n=0;
+        Statement st = cnx.createStatement();
+      String query = "SELECT * FROM  `concours` where is_done=0 ";
+         ResultSet rst = st.executeQuery(query);
+        while (rst.next()) {
+          n++;
+      }
+        return n;
+    }
+      public int get_concours_finish() throws SQLException
+            
+    {  
+        int n=0;
+        Statement st = cnx.createStatement();
+      String query = "SELECT * FROM  `concours` where is_done=1 ";
+         ResultSet rst = st.executeQuery(query);
+        while (rst.next()) {
+          n++;
+      }
+        return n;
+    }
+       public int get_concours_id() throws SQLException
+            
+    {  
+        int n=0;
+        Statement st = cnx.createStatement();
+      String query = "SELECT * FROM  `concours` where is_done=0 ";
+         ResultSet rst = st.executeQuery(query);
+        while (rst.next()) {
+         n=rst.getInt("id_concours");
+      }
+        return n;
+    }
+        public int get_concours_finish_id() throws SQLException
+            
+    {  
+        int n=0;
+        Statement st = cnx.createStatement();
+      String query = "SELECT * FROM  `concours` where is_done=1 ";
+         ResultSet rst = st.executeQuery(query);
+        while (rst.next()) {
+         n=rst.getInt("id_concours");
+      }
+        return n;
+    }
     
     
 
@@ -161,6 +208,32 @@ public class Service_concours implements Interface_concours{
          
        }
       return T; 
+    }
+    public int date_is_valid() throws SQLException
+    {        LocalDate d=LocalDate.now();
+    int n=0;
+              Statement st = cnx.createStatement();
+        String query = "SELECT * FROM  `concours` where date_fin > '"+d+"' and is_done=0  ";
+        ResultSet rst = st.executeQuery(query);    
+        
+        while(rst.next())
+        {
+         n++;   
+        }
+        return n;
+    }
+      public int ongoing_is_compt() throws SQLException
+    {      int n=0;
+  
+              Statement st = cnx.createStatement();
+        String query = "SELECT * FROM  `concours` where is_done=1 or is_done=0  ";
+        ResultSet rst = st.executeQuery(query);    
+        
+        while(rst.next())
+        {
+         n++;   
+        }
+        return n;
     }
     
 }
