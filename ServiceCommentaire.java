@@ -34,7 +34,8 @@ public class ServiceCommentaire implements Interface_commentaire {
     @Override
     public void add(commentaire t) throws SQLException {
                     Statement st = cnx.createStatement();
-          String req =" insert into commentaire (id_commentaire,date,email,contenu ) values (" +null+ ", '"+t.getDate()+"','"+t.getEmail()+"','"+t.getContenu()+"' )"; 
+                   
+          String req =" insert into commentaire (date,email,contenu ) values ('"+ LocalDate.now()+"','"+t.getEmail()+"','"+t.getContenu()+"' )"; 
     st.executeUpdate(req);
     }
 

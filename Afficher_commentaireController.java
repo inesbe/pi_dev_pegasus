@@ -62,6 +62,8 @@ public class Afficher_commentaireController implements Initializable {
     private JFXComboBox<Integer> combo_commentaire;
     @FXML
     private TableView<commentaire> tab_commentaire;
+    @FXML
+    private Button stat;
 
     /**
      * Initializes the controller class.
@@ -157,6 +159,16 @@ catch (SQLException ex) {
       stage.setScene(scene);
       stage.show();
     }
+
+    @FXML
+    private void stat(MouseEvent event) throws IOException {
+              Stage stage=(Stage)this.delete_id.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("stat_comments.fxml"));
+       Projet.Curseur(root);
+       Scene scene=new Scene(root);
+      stage.setScene(scene);
+      stage.show();
+        
+    }
     
 }
- 
