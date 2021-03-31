@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" minHeight="768.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: F5EDEC;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="projet.Modifier_commentaireController">
+   <children>
+      <Label layoutX="8.0" layoutY="10.0" prefHeight="68.0" prefWidth="1262.0" style="-fx-background-color: white;" />
+      <ImageView fitHeight="54.0" fitWidth="88.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/magic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="220.0" layoutX="91.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Capturee.PNG" />
+         </image>
+      </ImageView>
+      <JFXComboBox focusColor="#842a94" layoutX="1011.0" layoutY="22.0" prefHeight="42.0" prefWidth="125.0" promptText="Language" unFocusColor="#ea512e" />
+      <JFXButton buttonType="RAISED" layoutX="1157.0" layoutY="20.0" prefHeight="47.0" prefWidth="102.0" style="-fx-background-color: EA512E;" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="89.0" fitWidth="233.0" layoutX="21.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/testimonials-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="200.0" layoutX="1102.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/testimonials-3.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="410.0" layoutY="117.0" prefHeight="559.0" prefWidth="538.0" style="-fx-background-color: white;" />
+      <JFXButton fx:id="id_modif_com" buttonType="RAISED" layoutX="479.0" layoutY="599.0" onMouseClicked="#modify" prefHeight="34.0" prefWidth="399.0" style="-fx-background-color: EA512E;" text="MODIFY" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="id_affich_comm" buttonType="RAISED" layoutX="575.0" layoutY="701.0" onMouseClicked="#affich" prefHeight="42.0" prefWidth="211.0" style="-fx-background-color: EEB84B;" text="show existing comments" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="117.0" fitWidth="94.0" layoutX="879.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/choose-shape-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="716.0" onMouseClicked="#back" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: EA512E;" text=" back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="172.0" fitWidth="82.0" layoutX="1190.0" layoutY="599.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/value-shape-3.png" />
+         </image>
+      </ImageView>
+      <Text fill="#1b0238" layoutX="501.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFY COMMENT" wrappingWidth="424.13671875">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <TextField fx:id="id_email" layoutX="505.0" layoutY="239.0" prefHeight="42.0" prefWidth="350.0" promptText="Email" />
+      <JFXDatePicker fx:id="id_combo_date" layoutX="593.0" layoutY="512.0" promptText="Date" />
+      <TextField fx:id="id_contenu" layoutX="505.0" layoutY="322.0" prefHeight="164.0" prefWidth="350.0" promptText="your comment" />
+   </children>
+</AnchorPane>
