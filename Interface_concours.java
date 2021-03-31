@@ -17,7 +17,7 @@ public interface Interface_concours {
 
      void add (Concours t) throws SQLException;
     List<Concours> read() throws SQLException;
-    void update(Concours t) throws SQLException;
+    void update() throws SQLException;
     void delete(Concours t) throws SQLException;
     List<Integer> get_id() throws SQLException;
    public List<Concours> getConcours() throws SQLException;

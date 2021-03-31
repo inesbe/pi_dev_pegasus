@@ -3,25 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package projet;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import project.Service.Service_concours;
-import project.entities.Concours;
+import projet.services.Service_concours;
+import projet.services.ServiceClass;
+import projet.entity.Concours;
 
 /**
  * FXML Controller class
@@ -42,8 +49,7 @@ public class Ajouter_concoursController implements Initializable {
     private JFXDatePicker Date_debut;
     @FXML
     private JFXDatePicker Date_fin;
-    @FXML
-    private TextField Class_id;
+  
     @FXML
     private TextField Prize_id;
 
@@ -52,7 +58,9 @@ public class Ajouter_concoursController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+   
+             
     }    
 
     @FXML
@@ -60,10 +68,29 @@ public class Ajouter_concoursController implements Initializable {
     }
 
     @FXML
-    private void handleButtonAction(MouseEvent event) throws SQLException {
+    private void handleButtonAction(MouseEvent event) throws SQLException, IOException {
+        
+        
+        
            Service_concours sc=new Service_concours();
-        Concours c=new Concours(1,this.nom_concour.getText(),Integer.parseInt(this.Class_id.getText()),Integer.parseInt(this.Prize_id.getText()),this.Date_debut.getValue(),this.Date_fin.getValue());
+           System.out.print(sc.date_is_valid()+"   "+sc.get_concours());
+           
+           if(sc.date_is_valid()==0 && sc.get_concours()==0)
+           {
+               sc.update2();
+        Concours c=new Concours(this.nom_concour.getText(),this.Date_debut.getValue(),this.Date_fin.getValue(),Integer.parseInt(this.Prize_id.getText()));
         sc.add(c);
+           Stage stage=(Stage)this.btnshow.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("concours_front.fxml"));
+ 
+       Scene scene=new Scene(root);
+      stage.setScene(scene);
+      stage.show();
+           }
+           else
+           {
+             Alert a=new Alert(Alert.AlertType.WARNING); a.setContentText("there is ongoing compet "); a.setHeaderText(null); a.showAndWait();     
+           }
     }
 
     @FXML

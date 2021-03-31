@@ -1,12 +1,14 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package     project;
+package     projet;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -17,14 +19,19 @@ import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import project.Service.Service_concours;
-import project.entities.Concours;
+import javafx.stage.Stage;
+import projet.services.Service_concours;
+import projet.entity.Concours;
 
 /**
  * FXML Controller class
@@ -41,7 +48,6 @@ public class Afficher_concoursController implements Initializable {
     private TableColumn<Concours,String> concours_nom;
     @FXML
     private TableColumn<Concours,LocalDate> date_fin;
-    @FXML
     private TableColumn<Concours,Integer> id_class;
     @FXML
     private TableColumn<Concours,Integer> prix;
@@ -53,6 +59,12 @@ public class Afficher_concoursController implements Initializable {
     private Button delete_id;
     @FXML
     private TableView<Concours> tab_concours;
+    @FXML
+    private Button id_add;
+    @FXML
+    private Button modif_id;
+    @FXML
+    private JFXTextField id_search;
 
     /**
      * Initializes the controller class.
@@ -82,7 +94,7 @@ public class Afficher_concoursController implements Initializable {
 
             this.id_concours.setCellValueFactory(new PropertyValueFactory<>("id_concours"));
             this.concours_nom.setCellValueFactory(new PropertyValueFactory<>("nom_concours"));
-             this.id_class.setCellValueFactory(new PropertyValueFactory<>("id_class"));
+         
              this.date_debut.setCellValueFactory(new PropertyValueFactory<>("date_debut"));
               this.date_fin.setCellValueFactory(new PropertyValueFactory<>("date_fin"));
               this.prix.setCellValueFactory(new PropertyValueFactory<>("prix"));
@@ -112,13 +124,61 @@ public class Afficher_concoursController implements Initializable {
             Logger.getLogger(Afficher_concoursController.class.getName()).log(Level.SEVERE, null, ex);
         }
            ArrayList<Concours> lv;
+           
+           
+    }
        
-        try {
-            lv = (ArrayList<Concours>) sc.getConcours();
+
+
+    @FXML
+    private void add(MouseEvent event) throws IOException {
+                   Stage stage=(Stage)this.combo_concours.getScene().getWindow();
+       Parent root=FXMLLoader.load(getClass().getResource("ajouter_concours.fxml"));
+ 
+       Scene scene=new Scene(root);
+      stage.setScene(scene);
+      stage.show();
+        
+    }
+
+    @FXML
+    private void modif(MouseEvent event) {
+    }
+
+    @FXML
+    private void search1(KeyEvent event) {
+        Service_concours sc=new Service_concours();
+             ArrayList<Concours> lv;
+                try {
+            lv = (ArrayList<Concours>) sc.SearchConcours(this.id_search.getText());
        
-            sc.get_id();
+    
             ObservableList<Concours> data = FXCollections.observableArrayList(lv);
-            System.out.println("id_categorie"+data);
+         
+            this.id_concours.setCellValueFactory(new PropertyValueFactory<>("id_concours"));
+            this.concours_nom.setCellValueFactory(new PropertyValueFactory<>("nom_concours"));
+             this.id_class.setCellValueFactory(new PropertyValueFactory<>("id_class"));
+             this.date_debut.setCellValueFactory(new PropertyValueFactory<>("date_debut"));
+              this.date_fin.setCellValueFactory(new PropertyValueFactory<>("date_fin"));
+              this.prix.setCellValueFactory(new PropertyValueFactory<>("prix"));
+            this.tab_concours.setItems(data);
+             } catch (SQLException ex) {
+            Logger.getLogger(Afficher_concoursController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+        
+    
+
+    @FXML
+    private void search2(KeyEvent event) {
+              Service_concours sc=new Service_concours();
+             ArrayList<Concours> lv;
+                try {
+            lv = (ArrayList<Concours>) sc.SearchConcours(this.id_search.getText());
+       
+  
+            ObservableList<Concours> data = FXCollections.observableArrayList(lv);
+         
 
             this.id_concours.setCellValueFactory(new PropertyValueFactory<>("id_concours"));
             this.concours_nom.setCellValueFactory(new PropertyValueFactory<>("nom_concours"));
@@ -131,5 +191,30 @@ public class Afficher_concoursController implements Initializable {
             Logger.getLogger(Afficher_concoursController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
+    @FXML
+    private void search3(KeyEvent event) {
+              Service_concours sc=new Service_concours();
+             ArrayList<Concours> lv;
+                try {
+         lv = (ArrayList<Concours>) sc.SearchConcours(this.id_search.getText());
+       
+         
+            ObservableList<Concours> data = FXCollections.observableArrayList(lv);
+         
+
+            this.id_concours.setCellValueFactory(new PropertyValueFactory<>("id_concours"));
+            this.concours_nom.setCellValueFactory(new PropertyValueFactory<>("nom_concours"));
+             this.id_class.setCellValueFactory(new PropertyValueFactory<>("id_class"));
+             this.date_debut.setCellValueFactory(new PropertyValueFactory<>("date_debut"));
+              this.date_fin.setCellValueFactory(new PropertyValueFactory<>("date_fin"));
+              this.prix.setCellValueFactory(new PropertyValueFactory<>("prix"));
+            this.tab_concours.setItems(data);
+             } catch (SQLException ex) {
+            Logger.getLogger(Afficher_concoursController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+
+
 }
